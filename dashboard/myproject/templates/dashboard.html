@@ -1,0 +1,30 @@
+{% extends 'base.html' %} 
+{% load static %} 
+
+{% block title %}
+
+<title>Dashboard</title>
+
+{% endblock title %} 
+
+
+{% block css %} 
+{% endblock css %} 
+
+
+{% block body %} 
+
+{% if messages %} 
+    {% for msg in messages %}
+
+        <p {% if msg.tags %} class="p-3 alert-{{msg.tags}}" {% endif %}>{{msg}}</p>
+
+    {% endfor %}
+    
+{% endif %} 
+
+<div class="container text-center shadow my-5">
+    <h1 class="display-5 text-primary">Dashboard</h1>
+</div>
+
+{% endblock body %}
